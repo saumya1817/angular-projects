@@ -1,0 +1,76 @@
+#login-container {
+  height: 100vh;
+  width: 100%;
+//   background-color: rgb(224, 233, 64);
+background-color: rgb(103, 58, 183);
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+
+  #card {
+    height: 60vh;
+    width: 25vw;
+    position: absolute;
+    top: 20%;
+    left: 38%;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 12px 12px 2px 1px rgba(7, 7, 7, 0.2);
+  }
+
+  .example-form {
+    width: 20vw;
+    height: 50vh;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    align-items: center;
+
+    h2{
+        color: rgb(103, 58, 183);
+        font-size: 2.5em;
+        font-weight: 500;
+        text-align: center;
+    }
+  }
+
+  .example-full-width{
+    width: 20vw;
+    height: 10vh;
+    font-size: 1vw;
+    
+  }
+
+  .btn-width{
+    max-width: 10em;
+  }
+
+  .example-button-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 15em;
+    height: 3em;
+    font-size: 20px;
+    text-align: center;
+    left: 2em;
+    top: 1.2em;
+  }
+  
+  .footer{
+    width: 20em;
+    height: 10em;
+    padding-top: 4em;
+    font-size: 1.5em;
+
+    a{
+        padding-right: 2em;
+        padding-left: 1.2em;
+        text-decoration: none;
+        color: rgb(103, 58, 183);
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    }
+  }
+
+}

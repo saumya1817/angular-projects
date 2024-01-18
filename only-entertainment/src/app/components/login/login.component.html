@@ -1,1 +1,39 @@
-<p>login works!</p>
+<div id="login-container">
+    <div id="card">
+        
+        <form class="example-form" (submit)="formSubmit()">
+
+            <h2>Log In</h2>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Email" [formControl]="emailFormControl"
+                     [errorStateMatcher]="matcher">
+              <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                Please enter a valid email address
+              </mat-error>
+              <mat-error *ngIf="emailFormControl.hasError('required')">
+                Email is required
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Password" [formControl]="passwordFormControl">
+                <mat-error *ngIf="emailFormControl.hasError('required')">
+                    Password is required
+                </mat-error>
+              </mat-form-field>
+
+              <div class="btn-width">
+                <button mat-raised-button color="primary" class="example-button-row">Submit</button>
+              </div>
+
+              <div class="footer">
+                <a href="">Forgot Password?</a>
+                <a href="">New User?</a>
+              </div>
+
+          </form>
+
+          
+
+    </div>
+</div>
