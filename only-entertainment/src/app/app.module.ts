@@ -12,7 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
-import {MatDialog} from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,7 @@ import {MatDialog} from '@angular/material/dialog';
     MatInputModule,
     MatFormFieldModule,
     MatButtonModule,
-    MatDialog
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
