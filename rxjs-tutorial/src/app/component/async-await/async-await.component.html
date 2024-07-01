@@ -1,0 +1,29 @@
+<app-header> </app-header>
+<div class="my-3 mx-3">
+  <h3>Async/Await</h3>
+  <br>
+  
+  <div class="row">
+    <div class="col-md-4">
+        <h5>Ex 1 - With Promise</h5>
+        <hr />
+        <button class="btn btn-primary" (click)="withPromise()">Button 1</button>
+        <hr />
+        <div id="result1">{{result1}}</div>
+      </div><br>
+      <div class="col-md-4">
+        <h5>Ex 2 - With Async/Await</h5>
+        <hr />
+        <button class="btn btn-primary" (click)="withAsyncAwait()">Button 2</button>
+        <hr />
+        <div id="result2">{{result2}}</div>
+      </div><br>
+      <div class="col-md-4">
+        <h5>Ex 3 - With Fetch</h5>
+        <hr />
+        <button class="btn btn-primary" (click)="withFetch()">Button 3</button>
+        <hr />
+        <div id="result3">{{result3}}</div>
+      </div>
+  </div>
+</div>

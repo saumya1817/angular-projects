@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './component/header/header.component';
 import { ObservablesComponent } from './component/observables/observables.component';
 import { PromisesComponent } from './component/promises/promises.component';
+import { AsyncAwaitComponent } from './component/async-await/async-await.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ObservablesComponent,
-    PromisesComponent
+    PromisesComponent,
+    AsyncAwaitComponent
   ],
   imports: [
     BrowserModule,
