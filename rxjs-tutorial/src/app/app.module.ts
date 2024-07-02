@@ -7,6 +7,8 @@ import { HeaderComponent } from './component/header/header.component';
 import { ObservablesComponent } from './component/observables/observables.component';
 import { PromisesComponent } from './component/promises/promises.component';
 import { AsyncAwaitComponent } from './component/async-await/async-await.component';
+import { FromEventComponent } from './component/observables/from-event/from-event.component';
+import { ListComponent } from './component/observables/list/list.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { AsyncAwaitComponent } from './component/async-await/async-await.compone
     HeaderComponent,
     ObservablesComponent,
     PromisesComponent,
-    AsyncAwaitComponent
+    AsyncAwaitComponent,
+    FromEventComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
