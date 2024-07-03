@@ -6,6 +6,7 @@ import { PromisesComponent } from './component/promises/promises.component';
 import { AsyncAwaitComponent } from './component/async-await/async-await.component';
 import { ListComponent } from './component/observables/list/list.component';
 import { FromEventComponent } from './component/observables/from-event/from-event.component';
+import { IntervalComponent } from './component/observables/interval/interval.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,7 @@ const routes: Routes = [
     children: [
       {component: ListComponent, path: ''},
       {component: FromEventComponent, path: 'fromEvent'},
+      {component: IntervalComponent, path: 'interval'},
 
     ]
   },
