@@ -7,6 +7,7 @@ import { AsyncAwaitComponent } from './component/async-await/async-await.compone
 import { ListComponent } from './component/observables/list/list.component';
 import { FromEventComponent } from './component/observables/from-event/from-event.component';
 import { IntervalComponent } from './component/observables/interval/interval.component';
+import { OfFromComponent } from './component/of-from/of-from.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,7 @@ const routes: Routes = [
       {component: ListComponent, path: ''},
       {component: FromEventComponent, path: 'fromEvent'},
       {component: IntervalComponent, path: 'interval'},
+      {component: OfFromComponent, path: 'ofFrom'},
 
     ]
   },

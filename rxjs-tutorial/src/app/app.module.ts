@@ -10,6 +10,7 @@ import { AsyncAwaitComponent } from './component/async-await/async-await.compone
 import { FromEventComponent } from './component/observables/from-event/from-event.component';
 import { ListComponent } from './component/observables/list/list.component';
 import { IntervalComponent } from './component/observables/interval/interval.component';
+import { OfFromComponent } from './component/of-from/of-from.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { IntervalComponent } from './component/observables/interval/interval.com
     AsyncAwaitComponent,
     FromEventComponent,
     ListComponent,
-    IntervalComponent
+    IntervalComponent,
+    OfFromComponent
   ],
   imports: [
     BrowserModule,
