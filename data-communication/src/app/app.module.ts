@@ -9,6 +9,8 @@ import { OutputChildComponent } from './output/output-child/output-child.compone
 import { OutputParentComponent } from './output/output-parent/output-parent.component';
 import { ViewchildParentComponent } from './viewchild/viewchild-parent/viewchild-parent.component';
 import { ViewchildChildComponent } from './viewchild/viewchild-child/viewchild-child.component';
+import { ContentParentComponent } from './contentchild/content-parent/content-parent.component';
+import { ContentChildComponent } from './contentchild/content-child/content-child.component';
 
 const routes: Routes = [
   {
@@ -19,6 +21,9 @@ const routes: Routes = [
   },
   {
     path: 'viewchild', component: ViewchildParentComponent
+  },
+  {
+    path: 'contentchild', component: ContentParentComponent
   }
 ];
 
@@ -29,7 +34,9 @@ const routes: Routes = [
     OutputChildComponent,
     OutputParentComponent,
     ViewchildParentComponent,
-    ViewchildChildComponent
+    ViewchildChildComponent,
+    ContentParentComponent,
+    ContentChildComponent
   ],
   imports: [
     FormsModule,
