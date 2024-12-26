@@ -1,0 +1,19 @@
+<div class="container">
+    <h1>Data Communication Using ViewChild</h1>
+
+    <div class="parentDiv">
+        <input type="text" [(ngModel)]="name"
+            name="name" id="name" placeholder="Enter name to pass to child component">
+        <br>
+        <input type="button" value="Send data" (click)="passData()">
+
+        <ng-container>
+            <app-viewchild-child></app-viewchild-child>
+        </ng-container>
+
+        <p>Call Viewchild method - </p>
+        <input type="button" value="Call Method" (click)="callChildMethod()"><br>
+        {{ changedName }}
+    </div>
+
+</div>

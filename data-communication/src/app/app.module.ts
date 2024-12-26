@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { ParentComponent } from './input/parent/parent/parent.component';
 import { OutputChildComponent } from './output/output-child/output-child.component';
 import { OutputParentComponent } from './output/output-parent/output-parent.component';
+import { ViewchildParentComponent } from './viewchild/viewchild-parent/viewchild-parent.component';
+import { ViewchildChildComponent } from './viewchild/viewchild-child/viewchild-child.component';
 
 const routes: Routes = [
   {
@@ -14,6 +16,9 @@ const routes: Routes = [
   },
   {
     path: 'output', component: OutputParentComponent
+  },
+  {
+    path: 'viewchild', component: ViewchildParentComponent
   }
 ];
 
@@ -22,7 +27,9 @@ const routes: Routes = [
     AppComponent,
     ParentComponent,
     OutputChildComponent,
-    OutputParentComponent
+    OutputParentComponent,
+    ViewchildParentComponent,
+    ViewchildChildComponent
   ],
   imports: [
     FormsModule,
