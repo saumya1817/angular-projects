@@ -1,0 +1,12 @@
+<div class="container">
+    <h1>Data Communication Using Output</h1>
+
+    <div class="parentDiv">
+        <app-output-child (data)="showData($event)"></app-output-child>
+    </div>
+
+    <ng-container *ngIf="ifChildData">
+        <p>This is Child's data: </p>
+        <p>{{ childData }}</p>
+    </ng-container>
+</div>

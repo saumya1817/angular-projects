@@ -5,15 +5,12 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ParentComponent } from './input/parent/parent/parent.component';
-import { ParentComponent as OutputParentComponent } from './output/parent/parent/parent.component';
-import { ChildComponent } from './input/child/child/child.component';
+import { OutputChildComponent } from './output/output-child/output-child.component';
+import { OutputParentComponent } from './output/output-parent/output-parent.component';
 
 const routes: Routes = [
   {
     path: '', component: ParentComponent
-  },
-  {
-    path: 'input', component: ParentComponent
   },
   {
     path: 'output', component: OutputParentComponent
@@ -24,11 +21,12 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     ParentComponent,
-    ChildComponent
+    OutputChildComponent,
+    OutputParentComponent
   ],
   imports: [
-    BrowserModule,
     FormsModule,
+    BrowserModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],
