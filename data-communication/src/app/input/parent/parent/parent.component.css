@@ -1,0 +1,10 @@
+.parentInput, .parentSubmit{
+    margin: 1em;
+}
+
+.parentInput{
+    width: 20em;
+    height: 2em;
+    padding: 0.2em;
+}
+

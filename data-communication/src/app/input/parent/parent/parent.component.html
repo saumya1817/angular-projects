@@ -1,0 +1,14 @@
+<div class="container">
+    <h1>Data Communication Using Input Output</h1>
+
+    <div class="parentDiv">
+        <input class="parentInput" [(ngModel)]="userName" (ngModelChange)="hideChild()"
+            type="text" name="userName" id="userName" placeholder="Enter Username">
+        <br>
+        <input class="parentSubmit" type="button" value="Load Child Component" (click)="loadChild()">
+    </div>
+
+    <ng-container *ngIf="ifLoadChild">
+        <app-child [userName]="userName"></app-child>
+    </ng-container>
+</div>
