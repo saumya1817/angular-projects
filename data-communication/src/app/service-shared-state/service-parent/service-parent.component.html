@@ -1,0 +1,47 @@
+<div class="container">
+    <h1>Data Communication Using Shared Service</h1>
+
+    <h3>Used RxJS Subject - </h3>
+
+    <div class="parentDiv">
+        <input type="text" [(ngModel)]="message"
+            name="message" id="message" placeholder="Enter message to pass to child component">
+        <br>
+        <input type="button" value="Send data" (click)="subject()">
+        <hr>
+    </div>
+
+    <h3>Used RxJS Behavior Subject - </h3>
+
+    <div class="parentDiv">
+        <input type="text" [(ngModel)]="message1"
+            name="message" id="message1" placeholder="Enter first message">
+        <input type="text" [(ngModel)]="message2"
+            name="message" id="message2" placeholder="Enter second message">
+        <input type="text" [(ngModel)]="message3"
+            name="message" id="message3" placeholder="Enter third message">
+        <br>
+        <input type="button" value="Send data" (click)="behaviorSubject()">
+        <hr>
+    </div>
+
+    <h3>Used RxJS Replay Subject - </h3>
+
+    <div class="parentDiv">
+        <input type="text" [(ngModel)]="message4"
+            name="message" id="message1" placeholder="Enter first message">
+        <input type="text" [(ngModel)]="message5"
+            name="message" id="message2" placeholder="Enter second message">
+        <input type="text" [(ngModel)]="message6"
+            name="message" id="message3" placeholder="Enter third message">
+        <br>
+        <input type="button" value="Send data" (click)="replaySubject()">
+        <hr>
+    </div>
+
+    <ng-container>
+        <app-service-child [ifSubject]="ifSubject" [ifBehaviorSubject]="ifBehaviorSubject"
+            [ifReplaySubject]="ifReplaySubject"></app-service-child>
+    </ng-container>
+
+</div>

@@ -1,0 +1,27 @@
+<div class="container">
+    <ng-container *ngIf="ifSubject && !ifBehaviorSubject && !ifReplaySubject">
+        <h5>
+            Message from parent component using Subject - 
+            {{ data }}
+        </h5>
+    </ng-container>
+
+    <ng-container *ngIf="ifBehaviorSubject && !ifSubject && !ifReplaySubject">
+        <h5>
+            Message from parent component using Behavior Subject - 
+            {{ behaviorSubjectMsg }}
+        </h5>
+    </ng-container>
+
+    <ng-container *ngIf="ifReplaySubject && !ifSubject && !ifBehaviorSubject">
+        <h5>
+            Message from parent component using Replay Subject - 
+            <ul>
+                <li *ngFor="let msg of replaySubjectMsgs">
+                    {{msg}}
+                </li>
+            </ul>
+        </h5>
+    </ng-container>
+    
+</div>

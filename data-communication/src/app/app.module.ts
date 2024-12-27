@@ -11,6 +11,8 @@ import { ViewchildParentComponent } from './viewchild/viewchild-parent/viewchild
 import { ViewchildChildComponent } from './viewchild/viewchild-child/viewchild-child.component';
 import { ContentParentComponent } from './contentchild/content-parent/content-parent.component';
 import { ContentChildComponent } from './contentchild/content-child/content-child.component';
+import { ServiceParentComponent } from './service-shared-state/service-parent/service-parent.component';
+import { ServiceChildComponent } from './service-shared-state/service-child/service-child.component';
 
 const routes: Routes = [
   {
@@ -24,6 +26,9 @@ const routes: Routes = [
   },
   {
     path: 'contentchild', component: ContentParentComponent
+  },
+  {
+    path: 'service', component: ServiceParentComponent
   }
 ];
 
@@ -36,7 +41,9 @@ const routes: Routes = [
     ViewchildParentComponent,
     ViewchildChildComponent,
     ContentParentComponent,
-    ContentChildComponent
+    ContentChildComponent,
+    ServiceParentComponent,
+    ServiceChildComponent
   ],
   imports: [
     FormsModule,
