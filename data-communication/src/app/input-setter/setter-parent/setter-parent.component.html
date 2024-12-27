@@ -1,0 +1,16 @@
+<div class="container">
+    <h1>Data Communication Using @Input setter</h1>
+
+    <div class="parentDiv">
+        <input type="text" [(ngModel)]="message"
+            name="message" id="message" placeholder="Enter message">
+        <br>
+        <input type="button" value="Send data" (click)="passData()">
+
+        <ng-container>
+            <app-setter-child [data]="dataToChild"></app-setter-child>
+        </ng-container>
+
+    </div>
+
+</div>

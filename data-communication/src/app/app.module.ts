@@ -13,6 +13,8 @@ import { ContentParentComponent } from './contentchild/content-parent/content-pa
 import { ContentChildComponent } from './contentchild/content-child/content-child.component';
 import { ServiceParentComponent } from './service-shared-state/service-parent/service-parent.component';
 import { ServiceChildComponent } from './service-shared-state/service-child/service-child.component';
+import { SetterParentComponent } from './input-setter/setter-parent/setter-parent.component';
+import { SetterChildComponent } from './input-setter/setter-child/setter-child.component';
 
 const routes: Routes = [
   {
@@ -29,6 +31,9 @@ const routes: Routes = [
   },
   {
     path: 'service', component: ServiceParentComponent
+  },
+  {
+    path: 'input-setter', component: SetterParentComponent
   }
 ];
 
@@ -43,7 +48,9 @@ const routes: Routes = [
     ContentParentComponent,
     ContentChildComponent,
     ServiceParentComponent,
-    ServiceChildComponent
+    ServiceChildComponent,
+    SetterParentComponent,
+    SetterChildComponent
   ],
   imports: [
     FormsModule,

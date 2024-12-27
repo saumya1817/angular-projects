@@ -10,7 +10,11 @@ export class ViewchildParentComponent implements OnInit {
 
   name: any;
   changedName: any;
+  // Without child template reference
   @ViewChild(ViewchildChildComponent) viewChildComp: ViewchildChildComponent = new ViewchildChildComponent;
+
+  //With template child reference
+  // @ViewChild(viewChildRef) viewChildCompRef: ViewchildChildComponent;
 
   constructor() { }
 
