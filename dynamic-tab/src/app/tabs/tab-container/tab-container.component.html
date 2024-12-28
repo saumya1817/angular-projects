@@ -1,0 +1,19 @@
+<div class="tabs">
+    
+    <button *ngFor="let tab of tabs; let i = index" 
+            (click)="activateTab(i)" 
+            [class.active]="i === activeTab">
+      {{ tab.title }}
+      
+      <span class="closeSpan" (click)="removeTab(i, $event)">✖</span>
+
+    </button>
+
+    <button (click)="addTab()">➕ Add Tab</button>
+
+  </div>
+
+  <!-- This serves as a placeholder where dynamic components (tabs) will be inserted. -->
+  <!-- tabContainer variable allows us to identify and interact with the <ng-container> element programmatically. -->
+  <ng-container #tabContainer></ng-container>
+  

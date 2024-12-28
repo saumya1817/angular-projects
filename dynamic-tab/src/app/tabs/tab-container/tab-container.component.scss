@@ -1,0 +1,37 @@
+.tabs {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  .tabs button {
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    position: relative;
+    width: 8em;
+
+    .closeSpan{
+      margin-right: 0.5em;
+    }
+  }
+  .tabs button.active {
+    background-color: #e7e7e7;
+    font-weight: bold;
+    width: 10em;
+
+    .closeSpan{
+      margin-right: 0.5em;
+    }
+
+  }
+  .tabs button span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    font-size: 14px;
+    color: red;
+  }
+  
+  
