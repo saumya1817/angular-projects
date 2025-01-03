@@ -1,0 +1,42 @@
+.container{
+    margin-top: 10em;
+    font-family: 'Cambria', 'Cochin', Georgia, Times, 'Times New Roman', serif;
+
+    .heading{
+        text-align: center;
+    }
+}
+
+.loginForm{
+    display: grid;
+    row-gap: 1em;
+    grid-template-rows: 4em 4em 3em;
+    justify-content: center;
+}
+.loginForm > div{
+    align-items: center;
+}
+.loginForm > div > input{
+    height: 3em;
+    width: 30em;
+    border-radius: .3em;
+    border: 0.1em solid gray;
+    outline: none;
+    padding: none;
+
+    :hover{
+        box-shadow: .5em solid gray;
+    }
+}
+.loginForm > button{
+    font-size: 1.2em;
+    background-color: green;
+    color: white;
+}
+.loginForm > button:disabled, [disabled]{
+    background-color: gray;
+    color: white;
+}
+.error{
+    color: red;
+}
