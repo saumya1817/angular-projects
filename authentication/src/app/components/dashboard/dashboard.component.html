@@ -1,3 +1,33 @@
-<h2>Dashboard</h2>
-<p>Welcome to the protected dashboard!</p>
-<button (click)="logout()">Logout</button>
+<div class="container">
+    <div class="heading">
+        <h2>
+            Dashboard
+        </h2>
+        <h4>
+            Welcome to the User Management System!
+        </h4>
+    </div>
+
+    <form #searchForm="ngForm" (ngSubmit)="searchUser(searchForm)">
+        <div class="searchUsers">
+            <label for="username">Search Users</label><br>
+            <input type="text" name="username" id="username" placeholder="Search Name..." ngModel required />
+            <br>
+        </div>
+        <button type="submit">Search</button>
+    </form>
+
+    
+
+    <div class="users">
+        <h5>Users List -</h5>
+        <ul>
+            <li *ngFor="let user of filteredUsers">
+                {{ user.name }} - {{ user.email }}
+            </li>
+        </ul>
+        <h6 *ngIf="ifNoUsers" style="color: red;">No Users Found !</h6>
+    </div>
+
+    <button (click)="logout()">Logout</button>
+</div>
