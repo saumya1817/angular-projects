@@ -1,0 +1,39 @@
+<div class="base">
+    <h4>
+        Update User Details with Reactive Forms
+    </h4>
+
+    <form [formGroup]="updateForm"(ngSubmit)="onSubmit()">
+        <!-- Name -->
+         <div>
+            <label for="name">Name: </label>
+            <input type="text" id="name" formControlName="name"/>
+            <div *ngIf="updateForm.controls['name']?.invalid && updateForm.controls['name']?.touched">
+                <small *ngIf="updateForm.controls['name']?.errors?.required">Name is required.</small>
+                <small *ngIf="updateForm.controls['name']?.errors?.minlength">Name must be atleast 3 characters.</small>
+            </div>
+         </div>
+         <br>
+
+         <!-- Email -->
+          <div>
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" formControlName="email" />
+            <div *ngIf="updateForm.controls['email']?.invalid && updateForm.controls['email']?.touched">
+                <small *ngIf="updateForm.controls['email']?.errors?.required">Email is required.</small>
+                <small *ngIf="updateForm.controls['email']?.errors?.email">Invalid email.</small>
+            </div>
+          </div>
+
+          <br>
+          <!-- Submit Form -->
+          <button type="submit" [disabled]="updateForm.invalid">Update User</button>
+          <br>
+    </form>
+
+    <hr>
+
+    <h3>Current User Details</h3>
+    <p *ngIf="user">Name: {{ user.name }} | Email: {{ user.email }}</p>
+
+</div>
