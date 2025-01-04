@@ -1,0 +1,37 @@
+<div class="container">
+    <h2>
+        Weather Information
+    </h2>
+
+    <form #selectedCity="ngForm" (ngSubmit)="onSubmit(selectedCity)">
+
+        <div class="dropdown">
+            <select name="selectedCityName" id="selectedCityName" [(ngModel)]="selectedCityName">
+                <option value="Select">Select a City...</option>
+                <option value="NYC">New York</option>
+                <option value="London">London</option>
+                <option value="Tokyo">Tokyo</option>
+                <option value="Sydney">Sydney</option>
+            </select>
+        </div>
+
+        <button type="submit">Submit</button>
+
+    </form>
+    <br>
+    <div class="weatherTable" *ngIf="showWeatherTable">
+        <table>
+            <tr class="row">
+                <th>Date</th>
+                <th>Min Temp</th>
+                <th>Max Temp</th>
+            </tr>
+            <tr *ngFor="let weather of weatherInfo" class="row">
+                <td>{{ weather.date }}</td>
+                <td>{{ weather.minTemp }}&deg;C</td>
+                <td>{{ weather.maxTemp }}&deg;C</td>
+            </tr>
+        </table>
+    </div>
+
+</div>

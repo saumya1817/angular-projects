@@ -1,0 +1,15 @@
+.container{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10em;
+}
+
+.container > form{
+    .dropdown{
+        margin-bottom: 2em;
+    }
+}
+table{
+    border-spacing: 50px 0;
+}
