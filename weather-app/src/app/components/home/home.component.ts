@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { WeatherService } from 'src/app/services/weather.service';
 
 @Component({
@@ -13,10 +14,12 @@ export class HomeComponent implements OnInit {
   showWeatherTable: boolean = false;
 
   constructor(
-    private weatherService: WeatherService
+    private weatherService: WeatherService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
+    window.scrollTo(0,0);
   }
 
   onSubmit(form: any){
@@ -40,5 +43,9 @@ export class HomeComponent implements OnInit {
         }
       }
     );
+  }
+
+  fetchNews(){
+    this.router.navigate(['news']);
   }
 }

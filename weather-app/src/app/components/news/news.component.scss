@@ -1,0 +1,23 @@
+.container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+.container > div{
+    text-align: center;
+    border: 0.1em solid rgb(217, 201, 201);
+}
+.back{
+    display: grid;
+    justify-content: center;
+    margin-top: 2em;
+    padding: 1em;
+}
+.example-card {
+    max-width: 400px;
+  }
+  
+.example-header-image {
+    background-image: url('../../../assets/news.jpg');
+    background-size: cover;
+}
+  
