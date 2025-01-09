@@ -13,12 +13,17 @@ import { decrement, increment, reset } from '../state/counter/counter.actions';
 export class CounterComponent implements OnInit {
 
   count$: Observable<any>;
+  counter: any;
 
   constructor(private store: Store<AppState>) { 
     this.count$ = this.store.select(selectCounter)
   }
 
   ngOnInit(): void {
+    this.count$.subscribe((data)=>{
+      this.counter = data;
+    });
+
   }
 
   increment(){
