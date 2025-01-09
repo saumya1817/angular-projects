@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="counterDiv">
+        <h2>Counter Project - Angular State Management</h2>
+
+        <div class="action">
+            <button (click)="increment()">+</button>
+            <button (click)="decrement()">-</button>
+        </div>
+
+        <div class="reset_action">
+            <button type="reset" (click)="reset()">Reset Counter</button><br>
+        </div>
+
+        <h4>
+            Counter Value {{ count$ | async }}
+        </h4>
+    </div>
+</div>

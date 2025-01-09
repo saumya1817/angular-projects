@@ -1,0 +1,14 @@
+.action {
+    display: grid;
+    grid-template-columns: 2em 2em;
+
+    button {
+        margin-left: 5em;
+        margin-bottom: 2em;
+        width: 2em;
+    }
+}
+
+.reset_action {
+    margin-left: 2.5em;
+}
