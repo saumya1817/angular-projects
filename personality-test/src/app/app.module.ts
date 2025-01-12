@@ -7,6 +7,8 @@ import { HeaderComponent } from './components/shared/header/header.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { HomeComponent } from './components/features/home/home.component';
 import { PersonalityTestComponent } from './components/features/personality-test/personality-test.component';
+import { AboutComponent } from './components/features/about/about.component';
+import { ContactComponent } from './components/features/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { PersonalityTestComponent } from './components/features/personality-test
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    PersonalityTestComponent
+    PersonalityTestComponent,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

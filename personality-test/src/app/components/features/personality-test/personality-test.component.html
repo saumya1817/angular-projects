@@ -1,59 +1,66 @@
-<div class="container w-screen rounded-lg shadow-lg text-center text-white">
-    <span class="text-white text-base">
-        <br>
-        Get ready for 25 quirky multiple-choice questions! 🎉 <br>
-        Your answers will unlock fascinating insights into your personality. <br>
-        But hey, don’t take it too seriously—it’s all in good fun! 😉<br>
-    </span> <br>
-    
-    <div class="flex flex-col items-center justify-center">
-        <!-- Question Display -->
-         <br>
-        <div class="w-full max-w-xl bg-white text-black shadow-md rounded-lg py-6">
-          <h2 class="text-xl font-bold text-center ">
-            Question {{currentQuestionIndex + 1}} of {{questions.length}}
-          </h2>
-          <p class="text-gray-700 text-lg text-center">{{ currentQuestion.text }}</p>
-          
-          <div class="flex flex-col space-y-4 py-2 w-40  mx-10">
-            <button
-              *ngFor="let option of currentQuestion.options"
-              (click)="selectOption(option.trait)"
-              class="text-black py-2 px-4 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300"
-            >
-              {{ option.text }}
-            </button>
-          </div>
+<div class="container w-screen rounded-lg text-center text-white h-5/6">
+  <span class="text-white text-base mt-2">
+    <br> <br>
+    Get ready for 25 quirky multiple-choice questions! 🎉 <br>
+    Your answers will unlock fascinating insights into your personality. <br>
+    But hey, don’t take it too seriously—it’s all in good fun! 😉<br>
+  </span>
+
+  <div class="flex flex-col items-center justify-center">
+    <!-- Question Display -->
+    <br>
+    <div class="container mx-auto p-4">
+      <!-- Question Card -->
+      <div *ngIf="!displayResult"
+        class="w-full max-w-xl bg-white text-black rounded-lg py-6 mx-auto shadow-2xl shadow-black">
+        <h2 class="text-xl font-bold text-center mb-4">
+          Question {{ currentQuestionIndex + 1 }} of {{ questions.length }}
+        </h2>
+        <p class="text-gray-700 text-lg text-center mb-6">{{ currentQuestion.text }}</p>
+
+        <!-- Options -->
+        <div class="flex flex-col space-y-4 mx-10 my-1">
+          <button *ngFor="let option of currentQuestion.options; let j = index" (click)="selectOption(option.trait, j)"
+            [class.bg-blue-500]="selectedAnswers[currentQuestionIndex] === j"
+            [class.text-white]="selectedAnswers[currentQuestionIndex] === j" class="text-center text-black py-1 px-1 rounded-md
+                focus:outline-none focus:ring-1 focus:ring-blue-300">
+            {{ option.text }}
+          </button>
         </div>
-      
-        <!-- Navigation Arrows -->
-        <!-- <div class="flex justify-between w-full max-w-xl">
-          <button
-            [disabled]="currentQuestionIndex === 0"
-            (click)="previousQuestion()"
-            class="bg-gray-400 text-white py-2 px-4 rounded-lg hover:bg-gray-500 disabled:opacity-50"
-          >
+
+        <!-- Navigation Buttons -->
+        <div class="flex justify-between mx-10 my-1">
+          <button (click)="previousQuestion()" [disabled]="currentQuestionIndex === 0"
+            class="text-black py-1 px-3 rounded-lg border border-gray-300 hover:bg-yellow-200 transition duration-300 hover:text-black hover:font-bold hover:cursor-pointer">
             Previous
           </button>
-      
-          <button
-            [disabled]="currentQuestionIndex === questions.length - 1"
-            (click)="nextQuestion()"
-            class="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 disabled:opacity-50"
-          >
+          <button *ngIf="currentQuestionIndex < questions.length - 1" (click)="nextQuestion()"
+            class="text-white py-1 px-3 bg-blue-500 rounded-lg hover:bg-yellow-200 transition duration-300 hover:text-black hover:font-bold hover:cursor-pointer">
             Next
           </button>
-        </div> -->
+          <button *ngIf="currentQuestionIndex === questions.length - 1" (click)="submitQuiz()"
+            class="text-white py-1 px-3 bg-green-500 rounded-lg hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-300 hover:cursor-pointer">
+            Submit
+          </button>
+        </div>
+      </div>
 
-        <!-- <div class="">
-            <button
-              (click)="submitQuiz()"
-              class="w-full py-2 bg-blue-500 text-white font-bold rounded-md hover:bg-blue-600"
-            >
-              Submit
-            </button>
-        </div> -->
+      <div *ngIf="displayResult" class="w-full max-w-xl bg-white text-black rounded-lg py-4 px-6
+            mx-auto shadow-2xl shadow-black">
+        <h2 class="text-lg font-bold text-center mb-4">
+          {{ resultTitle }}
+        </h2>
+        <p class="text-gray-700 text-md text-center mb-6">{{ resultDesc }}</p>
+        <a href="/" class="absolute  transform -translate-x-1/2 bg-blue-500
+               text-white py-2 px-4 rounded-lg text-center 
+               hover:bg-yellow-200 transition duration-300 hover:text-black hover:font-bold
+               hover:cursor-pointer">
+          Go Back to Home
+        </a>               
+      </div>
+    </div>
 
-      </div>      
+  </div>
+  <br><br><br>
 
 </div>

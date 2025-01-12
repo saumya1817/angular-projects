@@ -5,15 +5,6 @@ interface Question {
   
 export const questions: Question[] = [
     {
-      text: 'What’s your favorite way to spend a day off?',
-      options: [
-        { text: 'Relaxing at home', trait: 'empathetic' },
-        { text: 'Planning a productive day', trait: 'analytical' },
-        { text: 'Going on an adventure', trait: 'adventurous' },
-        { text: 'Catching up with friends', trait: 'creative' },
-      ],
-    },
-    {
       text: 'Which color best represents your personality?',
       options: [
         { text: 'Blue – calm and collected', trait: 'empathetic' },
