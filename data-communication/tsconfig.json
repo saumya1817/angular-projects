@@ -10,8 +10,9 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
+    "esModuleInterop": true,
+    "module": "commonjs",
     "target": "es2015",
-    "module": "es2020",
     "lib": [
       "es2018",
       "dom"

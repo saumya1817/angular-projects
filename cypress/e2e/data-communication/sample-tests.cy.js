@@ -22,5 +22,5 @@ describe('Check Page Load', ()=>{
 
     it('click on button', ()=>{
         cy.get('.container .parentDiv .parentSubmit').click()
-    })
+    });
 });
